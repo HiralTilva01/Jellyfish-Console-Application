@@ -44,7 +44,7 @@ namespace Jellyfish_Test_Project_App
                 ////Call function to process the inputes and provide output
                 inputesList = ProcessRequest.CalculateResult(inputesList);
 
-                ////Display Output message
+                ////Display Output 
                 if (inputesList?.Count > 0)
                 {
                     Console.WriteLine(SystemMessages.SeparatorLine);
@@ -72,7 +72,7 @@ namespace Jellyfish_Test_Project_App
             //// Ask to Continue OR Exit
             NextInputRequied:
                 Console.WriteLine(SystemMessages.ContinueMessage);
-                char answer = Convert.ToChar(Console.ReadLine());
+                char answer = Convert.ToChar(Console.ReadLine().ToLower());
                 if (answer == 'y')
                 {
                     goto ContinueInput;

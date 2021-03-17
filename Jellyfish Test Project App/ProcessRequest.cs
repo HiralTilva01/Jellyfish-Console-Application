@@ -64,6 +64,7 @@ namespace Jellyfish_Test_Project_App
                                             {
                                                 switch (charItem)
                                                 {
+                                                    //// Check for Forward Direction
                                                     case Constants.FORWARD_DIRECTION:
                                                         switch (initialDirection)
                                                         {
@@ -95,18 +96,9 @@ namespace Jellyfish_Test_Project_App
                                                                 break;
                                                         }
 
-                                                        //If jellyfish is lost save the actual coordinates
-                                                        if (isLost)
-                                                        {
-                                                            if (!(i > 1 && finalResults[i - 1]?.IsLost == true && finalResults[i - 1].LostX == nextX && finalResults[i - 1].LostY == nextY))
-                                                            {
-                                                                finalResults[i].IsLost = true;
-                                                                finalResults[i].LostX = nextX;
-                                                                finalResults[i].LostY = nextY;
-                                                                break;
-                                                            }
-                                                        }
                                                         break;
+
+                                                    //// Check for Right Move
                                                     case Constants.RIGHT_MOVE:
                                                         switch (initialDirection)
                                                         {
@@ -126,6 +118,8 @@ namespace Jellyfish_Test_Project_App
                                                                 break;
                                                         }
                                                         break;
+
+                                                    //// Check for Left Move
                                                     case Constants.LEFT_MOVE:
                                                         switch (initialDirection)
                                                         {
@@ -145,6 +139,18 @@ namespace Jellyfish_Test_Project_App
                                                                 break;
                                                         }
                                                         break;
+                                                }
+
+                                                //If jellyfish is lost save the actual coordinates for next jellyfish move
+                                                if (isLost)
+                                                {
+                                                    if (!(i > 1 && finalResults[i - 1]?.IsLost == true && finalResults[i - 1].LostX == nextX && finalResults[i - 1].LostY == nextY))
+                                                    {
+                                                        finalResults[i].IsLost = true;
+                                                        finalResults[i].LostX = nextX;
+                                                        finalResults[i].LostY = nextY;
+                                                        break;
+                                                    }
                                                 }
                                             }
                                             else
