@@ -1,9 +1,8 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="FinalResult.cs">
+// <copyright file="ErrorLog.cs">
 // Copyright (c). All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------
-
 
 namespace Jellyfish_Test_Project_App
 {

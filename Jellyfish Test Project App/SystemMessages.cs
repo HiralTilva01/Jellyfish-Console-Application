@@ -17,7 +17,7 @@ namespace Jellyfish_Test_Project_App
         
         public const string WelcomeMessage = "Welcome to Jellyfish task! Jellyfish are able to move according to instructions provided.";
         public const string ErrorMessage = "Error occurred while executing your request.";
-        public const string DisplayOutput = "Press C to process the request and display the output.";
+        public const string DisplayOutput = "To display output Press “Enter” “C” “Enter” ";
         public const string ContinueMessage = "Do you want to Continue?(y/n):";
         public const string OutputMessage = "Output is as below:";
         public const string ValidInput = "Please Enter valid input.";
@@ -27,6 +27,7 @@ namespace Jellyfish_Test_Project_App
         public const string ValidFirstTwoDigit = "First word in line {1} should be 2 digit integer number.";
         public const string ValidLineInputMessage = "Input in a line {1} should consists of a sequence of jellyfish positions and instructions.";
         public const string Inputs = "Please Enter Inputs:";
+        public const string NoInstructionFound = "Please Enter sequence of jellyfish positions and instructions.";
         public const string MaximumXLimitExceed = "The maximum value for first digit(X coordinate) is 9.";
         public const string MaximumYLimitExceed = "The maximum value for second digit(Y coordinate) is 9.";
         public const string SeparatorLine = "------------------------------------------------------------------------  ";

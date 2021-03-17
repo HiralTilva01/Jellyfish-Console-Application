@@ -57,13 +57,18 @@ namespace Jellyfish_Test_Project_App
                     }
                     else
                     {
-                        if (inputesList?.Count > 1)
+                        if (inputesList?.Count > 2)
                         {
                             for (int i = 1; i < inputesList.Count - 1; i++)
                             {
                                 Console.WriteLine(inputesList[i].ErrorMessage?.Length > 0 ? inputesList[i].ErrorMessage : inputesList[i].Output);
                             }
 
+                            goto NextInputRequied;
+                        }
+                        else
+                        {
+                            Console.WriteLine(SystemMessages.NoInstructionFound);
                             goto NextInputRequied;
                         }
                     }
